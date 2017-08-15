@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+	<style>
+		body{
+			background:url('http://thecatapi.com/api/images/get?format=src');
+			background-size:cover;
+		}
+		.vzdoh{
+			font-family:'Lobster';
+			font-size:120px;
+			color:white;
+			text-shadow:0.2px 0.2px 2px black,
+						-0.2px 0.2px 2px black;
+			text-align:center;
+			margin-top:15%;
+			transition: opacity 1s ease-in-out;
+		}
+		.vzdoh:hover{
+			opacity:0;
+		}
+	</style>
+</head>
+<body>
+	<div class="vzdoh" onmouseover="glibokijvzdoh()">глибокий вздох</div>
+	<script>
+		hissize = 100
+		function glibokijvzdoh(){
+			setTimeout(function(){
+				if (document.querySelector(".vzdoh").style.opacity == 0){
+					if (document.querySelector(".vzdoh").textContent == "глибокий вздох"){
+						document.querySelector(".vzdoh").textContent = "а";
+					}else{
+						document.querySelector(".vzdoh").textContent = "глибокий вздох";
+						document.body.style.background = "url('http://thecatapi.com/api/images/get?format=src')"
+						document.body.style.backgroundSize = hissize + "%"
+						hissize = hissize - 50
+					}
+				};
+			}, 1000);
+		};
+	</script>
+</body>
+</html>
